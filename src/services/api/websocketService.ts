@@ -137,7 +137,7 @@ class WebSocketService {
         console.log(`WebSocket connected to ${exchange}`);
         this.reconnectAttempts = 0;
         if (this.socket && this.currentSymbol) {
-          this.socket.send(config.subscriptionMessage(this.currentSymbol));
+          this.socket.send(config.subscriptionMessage(this.currentSymbol) as string);
         }
       };
       
